@@ -2,23 +2,39 @@
 """Guarde en lista `naturales` los primeros 100 números naturales (desde el 1) 
 usando el bucle while
 """
-
-
-
-
+n=0
+naturales=list()
+while n<100:
+  naturales.append(n+1)
+  n+=1
+print(naturales)
+  
 """Guarde en `acumulado` una lista con el siguiente patrón:
 
 ['1','1 2','1 2 3','1 2 3 4','1 2 3 4 5',...,'...47 48 49 50']
 
 Hasta el número 50.
 """
-
-
+acumulado=list()
+n=1
+item=''
+for i in range(1,51,1):
+    tmp=list()
+    while n<=i:
+        #print(n,c)
+        tmp.append(str(n))
+        item=''.join(tmp)
+        n=n+1
+    acumulado.append(item)    
+    n=1
+#print(acumulado)
 
 
 """Guarde en `suma100` el entero de la suma de todos los números entre 1 y 100:
 """
-
+suma100=0
+for i in range(101):
+  suma100+=i
 
 
 
@@ -30,6 +46,17 @@ separados por coma, así:
 '134,268,...'
 
 """
+n=1
+control=1
+tabla100=''
+l1=list()
+while control <= 10:
+    if n % 134 == 0:
+        control+=1
+        l1.append(str(n))
+    n+=1        
+tabla100=','.join(l1)
+
 
 
 
@@ -41,7 +68,12 @@ está ordenada).
 """
 lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
 
-
+acu=1
+multiplos3=0
+for i in lista1:
+    if i % 3 == 0:
+        if i<300:
+            multiplos3=acu+multiplos3
 
 
 
@@ -60,7 +92,22 @@ lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 
 ]
 """
 
-
+l1=list()   
+l2=list()
+acumulado=list()  
+regresivo=list()  
+n=1
+for i in range(51):
+    while n<=i:
+        l1.append(str(n))
+        n=n+1
+    l2=''.join(l1)
+    acumulado.append(l2)
+    l1=list()    
+    n=1    
+acumulado.pop(0)
+regresivo=acumulado
+regresivo.reverse()
 
 
 
@@ -69,8 +116,11 @@ lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 
 `invertido` (sin hacer uso de la función `reversed` ni del método `reverse`)
 """
 lista2 = list(range(1, 70, 5))
-
-
+invertido=list()
+ll=len(lista2)-1
+for i in lista2:
+    invertido.append(lista2[ll])
+    ll-=1
 
 
 
