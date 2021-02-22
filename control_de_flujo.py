@@ -181,7 +181,10 @@ lista3 = [941, 149, 672, 208, 99, 562, 749, 947, 251, 750, 889, 596, 836, 742, 5
 """Encuentre la suma de la serie 2 +22 + 222 + 2222 + .. hasta sumar 10 términos 
 y guardar resultado en variable `suma_2s` 
 """
-
+suma_2s=0
+for i in range(11):
+    #print(i)
+    suma_2s=2+suma_2s
 
 
 
@@ -206,7 +209,17 @@ cantidad máxima de asteriscos de 30.
 **
 *
 """
-
+l=list()
+a='*'
+for i in range(9):
+    l.append(a)
+    a=a+'*'
+patron='\n'.join(l)
+l.reverse()
+del l[0]
+patron2='\n'.join(l)
+patron=patron+'\n'+patron2
+print(patron)
 
 
 
