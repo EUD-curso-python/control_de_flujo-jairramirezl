@@ -129,7 +129,7 @@ Nota: Un número primo es un número entero que no se puede calcular multiplican
 otros números enteros.
 """
 
-
+for i in range():
 
 
 
