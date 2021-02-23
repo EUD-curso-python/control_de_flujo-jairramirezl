@@ -125,6 +125,20 @@ Nota: Un número primo es un número entero que no se puede calcular multiplican
 otros números enteros.
 """
 
+primos=[]
+count=0
+for dig in range(37, 300+1):
+    for dig_2 in range(1, dig + 1):
+        if dig%dig_2==0:
+            count+=1
+    if count==2:
+        primos.append(dig)
+    count=0
+print(primos)
+
+
+
+
 
 
 
@@ -138,8 +152,14 @@ del segundo cada uno se calcula sumando los dos anteriores términos de la serie
 
 """
 
-
-
+count = 2
+fibonacci=[0, 1]
+while count <= 59:
+    longitud = len(fibonacci)-1
+    nuevo=(fibonacci[longitud-1] + fibonacci[longitud])
+    fibonacci.append(nuevo)
+    count+=1
+print(fibonacci)
 
 
 """Guardar en `factorial` el factorial de 30
@@ -223,8 +243,18 @@ patron = ''
 for numero in range (1,31):
     patron += "*"*(numero) + "\n"
 for numero in range (29,0, -1):
-    patron += "*"*(numero) + "\n"
-patron=patron.strip()
+    if numero == 1:
+        patron += "*"*(numero)    
+    else:
+        patron += "*"*(numero) + "\n"
+print (patron)
+
+# patron = ''
+# for numero in range (1,31):
+#     patron += "*"*(numero) + "\n"
+# for numero in range (29,0, -1):
+#     patron += "*"*(numero) + "\n"
+# patron=patron.strip()
 #print(patron)
 
 #repr(patron)
