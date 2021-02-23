@@ -7,7 +7,7 @@ naturales=list()
 while n<100:
   naturales.append(n+1)
   n+=1
-print(naturales)
+#print(naturales)
   
 """Guarde en `acumulado` una lista con el siguiente patrón:
 
@@ -23,11 +23,11 @@ for i in range(1,51,1):
     while n<=i:
         #print(n,c)
         tmp.append(str(n))
-        item=''.join(tmp)
+        item=' '.join(tmp)
         n=n+1
     acumulado.append(item)    
     n=1
-#print(acumulado)
+print(acumulado)
 
 
 """Guarde en `suma100` el entero de la suma de todos los números entre 1 y 100:
@@ -101,13 +101,14 @@ for i in range(51):
     while n<=i:
         l1.append(str(n))
         n=n+1
-    l2=''.join(l1)
+    l2=' '.join(l1)
     acumulado.append(l2)
     l1=list()    
     n=1    
 acumulado.pop(0)
 regresivo=acumulado
 regresivo.reverse()
+#print(regresivo)
 
 
 
@@ -129,7 +130,7 @@ Nota: Un número primo es un número entero que no se puede calcular multiplican
 otros números enteros.
 """
 
-for i in range():
+
 
 
 
@@ -178,9 +179,9 @@ for i in range(0,81,2):
 1 al 100. 
 """
 cubos=list()
-for i in range(101):
+for i in range(1,101):
   cubos.append(i**3)
-  print(cubos[i])
+  #print(cubos[i])
 
 
 
@@ -217,17 +218,16 @@ cantidad máxima de asteriscos de 30.
 **
 *
 """
-l=list()
-a='*'
-for i in range(9):
-    l.append(a)
-    a=a+'*'
-patron='\n'.join(l)
-l.reverse()
-del l[0]
-patron2='\n'.join(l)
-patron=patron+'\n'+patron2
-print(patron)
+
+patron = ''
+for numero in range (1,31):
+    patron += "*"*(numero) + "\n"
+for numero in range (29,0, -1):
+    patron += "*"*(numero) + "\n"
+patron=patron.strip()
+#print(patron)
+
+#repr(patron)
 
 
 
