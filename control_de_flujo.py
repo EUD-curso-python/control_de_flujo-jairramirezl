@@ -71,9 +71,8 @@ lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 
 acu=1
 multiplos3=0
 for i in lista1:
-    if i % 3 == 0:
-        if i<300:
-            multiplos3=acu+multiplos3
+    if i % 3 == 0 and i<300:
+      multiplos3=acu+multiplos3
 
 
 
@@ -94,21 +93,17 @@ for i in lista1:
 
 l1=list()   
 l2=list()
-acumulado=list()  
-regresivo=list()  
+regresivo50=list()  
 n=1
-for i in range(51):
+for i in range(50,0,-1):
     while n<=i:
         l1.append(str(n))
         n=n+1
+    l1.reverse()
     l2=' '.join(l1)
-    acumulado.append(l2)
+    regresivo50.append(l2)
     l1=list()    
-    n=1    
-acumulado.pop(0)
-regresivo=acumulado
-regresivo.reverse()
-#print(regresivo)
+    n=1 
 
 
 
@@ -191,10 +186,15 @@ for i in range(1,101):
 y guardar resultado en variable `suma_2s` 
 """
 suma_2s=0
-for i in range(11):
-    #print(i)
-    suma_2s=2+suma_2s
+suma=1
+l=list()
+for i in range(1,11):
+    suma='2'*i
+    suma=int(suma)
+    l.append(suma)
 
+for el in l:
+    suma_2s=el+suma_2s
 
 
 
